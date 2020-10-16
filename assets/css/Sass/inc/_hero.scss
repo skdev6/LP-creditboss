@@ -1,0 +1,42 @@
+.hero-slideshow{ 
+	.swiper-slide { 
+	  overflow: hidden;
+		.slide-inner{
+			height: 680px;     
+			width: 100%;
+			background-size: cover;
+			background-position: center;
+			padding:20px 0;  
+			position: relative; 
+			z-index: 2;
+			&::before{
+				content: "";
+				height: 100%;
+				width: 100%;
+				left: 0;
+				top: 0;
+				position: absolute;
+				background-color: rgba(0,0,0,.5); 
+				z-index: -1;
+ 			}
+		}
+	}
+	.slide-text-content{
+		max-width: 620px;  
+		.title,p{ 
+			color: #fff; 
+			margin-bottom: 5px; 
+		}
+		.title{
+			font-size: 36px;
+			line-height: 51px; 
+		}
+		p{
+			font-size: 20px;
+			line-height: 30px; 
+		}
+		.btn{
+			margin-top: 22px;  
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.slide-btn{
+	background: transparent;
+	border: transparent;
+	@include transition(all 0.25s); 
+	svg{
+		width: 19px;
+		path{
+			stroke: #ddd;
+			@include transition(all 0.25s);
+		}
+	}
+}
+.has-slide-btn{
+	position: relative;
+	padding: 0 40px;
+	.slide-btn{
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
+		z-index: 5;
+	}
+	.btn-next{
+		right: 0;
+	}
+	.btn-prev{
+		left: 0;
+	}
+}
+.l-0{
+	right: auto;
+	left: 0;
+}
+.r-0{
+	left: auto;
+	right: 0;
+}

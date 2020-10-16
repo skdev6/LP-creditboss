@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Rozha+One&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height:30px;   
+    color: #000000;   
+    background: #FFFFFF; 
+    overflow-x: hidden;  
+    font-size: 300; 
+}
+img{
+    vertical-align: bottom;
+    max-width: 100%;
+}
+h1,
+h2, 
+h3, 
+h4, 
+h5, 
+h6{
+    color: #2E3F59;  
+    font-weight: 400;  
+    font-family: 'Rozha One', serif; 
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 1.4em;
+} 
+h2 {
+    font-size: 56px;
+    line-height: 75px;
+    letter-spacing: 0;
+}
+h3 {
+    font-size: 32px;
+    line-height: 42px;
+}
+h4 {
+    font-size: 26px;
+    line-height: 1.6em; 
+}
+h5 {
+    font-size: 20px;
+    line-height: 1.6em;
+}
+h6 {
+    font-size: 18px;
+    line-height: 1.8;
+} 
+a,button,input{
+    outline: none !important;
+}
+.btn{
+    padding: 15px 22px; 
+    border-radius: 0;
+    border: 2px solid;  
+    @include transition(all 0.25s !important);    
+}
+.btn-outline-light{ 
+   border-color:#fff;  
+   position: relative; 
+   z-index: 2;
+    &:before{ 
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; 
+        z-index: -1;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+         background-color: #fff;   
+        -webkit-transform-origin: right center;
+        transform-origin: right center;  
+        -webkit-transition: -webkit-transform .6s cubic-bezier(.19,1,.22,1);
+        transition: -webkit-transform .6s cubic-bezier(.19,1,.22,1);
+        transition: transform .6s cubic-bezier(.19,1,.22,1);
+        transition: transform .6s cubic-bezier(.19,1,.22,1),-webkit-transform .6s cubic-bezier(.19,1,.22,1);
+    } 
+    &:hover{ 
+        background-color: transparent;   
+        color: #000;  
+    &:before{ 
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+    }}
+}
+.container-fluid{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    @media #{$md_device}{
+        padding-left: 2vw;
+        padding-right:2vw;
+    }
+    @media #{$sm_mobile}{
+        padding-left: 15px;
+        padding-right: 15px; 
+    }
+}
+.sec-pt-90{
+    padding-top: 90px;
+    @media #{$lg_device}{
+        padding-top: 70px; 
+    }
+    @media #{$md_device}{
+        padding-top: 50px;
+    }  
+}
+.sec-pb-90{
+    padding-bottom: 90px;
+    @media #{$lg_device}{
+        padding-bottom: 70px; 
+    }
+    @media #{$md_device}{
+        padding-bottom: 50px;
+    }  
+}
+.sec-pt-120{
+    padding-top: 120px;
+    @media #{$lg_device}{
+        padding-top: 110px; 
+    }
+    @media #{$md_device}{
+        padding-top: 80px;
+    }  
+}
+.sec-pb-120{
+    padding-bottom:120px;
+    @media #{$lg_device}{
+        padding-bottom: 110px; 
+    }
+    @media #{$md_device}{
+        padding-bottom: 80px; 
+    }  
+}
+.has-sep{ 
+    position: relative; 
+    .sep-area{
+        position: absolute;
+        bottom: 0;
+        left: 0; 
+        @include transform(translateX(0)); 
+        width: 331px;
+        height: 1px;
+        background-color: #000; 
+    }
+    .spe1,.spe2{    
+        position: absolute;
+        bottom: 0; 
+        &::before,&::after{
+            content: "";
+            position: absolute; 
+            height: 1px;
+            width: 33px;  
+            left: 0;
+            top: 0; 
+            background-color: #000; 
+        }
+    }
+    .spe1{ 
+        @include transform(rotate(-45deg) translateX(-50%));
+        left: calc(50% + -15px);   
+        bottom: -11px;  
+        &::before{
+            left: 5px; 
+            top: 5px; 
+        } 
+    } 
+    .spe2{
+        @include transform(rotate(45deg) translateX(-50%)); 
+        bottom: 12px; 
+        left: calc(50% + -6px);  
+        &::before{  
+            left: -5px;  
+            top: 5px; 
+        }
+    }
+}
+.text-center.has-sep{
+    .sep-area{   
+        left: 50%;  
+        @include transform(translateX(-50%)); 
+    }
+}
+.sec-title{
+    margin-bottom: 50px;  
+    .title{ 
+        font-size: 30px;
+        line-height: 43px; 
+        color: #000000; 
+        position: relative; 
+        padding-bottom: 18px;
+        margin-bottom: 28px; 
+        margin-bottom: 12px;  
+        @media #{$lg_device}{
+            font-size: 40px;
+            line-height: 50px;
+        }
+        @media #{$md_device}{
+            font-size: 36px;
+            line-height: 45px;
+        }
+        @media #{$sm_device}{
+            font-size: 30px;
+            line-height: 40px; 
+        }
+    }
+    h2{
+        font-size: 36px;
+        line-height:58px; 
+        position: relative; 
+        padding-bottom: 18px;
+        margin-bottom: 28px; 
+        @media #{$lg_device}{
+            font-size: 30px;
+            line-height: 50px;
+        }
+        @media #{$md_device}{
+            font-size: 40px;
+            line-height: 45px;
+        }
+        @media #{$sm_device}{
+            font-size: 28px;
+            line-height: 35px;  
+        }
+        .sep{ 
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 100px;
+            background-color: #2E3F59;
+            &::before{
+                content: "";
+                position: absolute; 
+                height: 100%;
+                width: 50px;
+                left: 0;
+                background-color: #DFEAFA; 
+            }
+        }
+    }
+    .sub-title{ 
+        font-size: 24px;
+        line-height: 38px; 
+        margin-bottom: 44px;  
+        @media #{$lg_device}{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @media #{$md_device}{
+            font-size:19px;
+            line-height:28px;
+        } 
+    }
+    h2{
+        margin-bottom: 25px;
+        strong{
+            font-weight: bold;
+            color: #FF7F00;
+        }
+    }
+}
+.sec-title.mb-90 {
+    margin-bottom: 90px;
+} 
+.sm-title{
+    font-size:22px;
+    line-height: 31px; 
+    margin-bottom: 5px;   
+}
