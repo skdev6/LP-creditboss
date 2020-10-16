@@ -23,6 +23,17 @@ $(".hero-slideshow").each(function(){
   });  
 });
 
+// TESTIMONIAL SLIDE 
+new Swiper('.testimonial-slide', {  
+  loop: false,  
+  speed: 1000,  
+  navigation: { 
+    nextEl: '.testimonial-next',
+    prevEl: '.testimonial-prev',
+  },
+});  
+
+
 
 
 });

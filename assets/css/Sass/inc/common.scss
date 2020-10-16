@@ -18,7 +18,7 @@ h3,
 h4, 
 h5, 
 h6{
-    color: #2E3F59;  
+    color: #000;   
     font-weight: 400;  
     font-family: 'Rozha One', serif; 
 }
@@ -137,6 +137,21 @@ a,button,input{
         padding-bottom: 80px; 
     }  
 }
+.has-sec-bg{
+    background-size: cover;background-position: center;background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    &::before{
+        content: "";
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -2; 
+        position: absolute;
+        background-color: rgba(0,0,0,.7);  
+    }
+}
 .has-sep{ 
     position: relative; 
     .sep-area{
@@ -184,6 +199,16 @@ a,button,input{
     .sep-area{   
         left: 50%;  
         @include transform(translateX(-50%)); 
+    }
+}
+.text-light.has-sep{
+    .sep-area{
+        background-color: #fff; 
+        .spe1,.spe2{
+            &::before,&::after{
+                background-color: #fff;
+            }
+        }
     }
 }
 .sec-title{
@@ -272,4 +297,9 @@ a,button,input{
     font-size:22px;
     line-height: 31px; 
     margin-bottom: 5px;   
+}
+.md-title{
+    font-size: 30px;
+    line-height: 43p;
+
 }

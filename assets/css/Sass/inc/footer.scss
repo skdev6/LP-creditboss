@@ -1,7 +1,10 @@
 .footer-area{
-	background-color: #2E3F59; 
+	background-color: #000;  
 	color: #fff; 
- 
+ 	.lg-title{
+ 		color: #fff;
+ 		font-size: 36px;line-height: 51px; 
+ 	}
 }
 .footer-top{
 	padding-top: 120px;
@@ -12,13 +15,13 @@
 	margin: 0;
 	list-style: none; 
 	font-size: 14px;
-	color: #ABB9D1;
+	color: #fff; 
 	li{
-		display: inline-block; 
-		padding: 0 15px; 
+		display: inline-block;  
+		padding: 0 5px; 
 	}
 	a{
-		color: #ABB9D1;  
+		color: #fff;  
 	}
 }
 .footer-bottom{

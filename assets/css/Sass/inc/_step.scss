@@ -15,6 +15,8 @@
 .step-card{
 	.sm-title{  
 		position: relative;  
+		padding-top: 14px;  
+		margin-top: 10px; 
 		&:before{ 
 			content: "";
 			height: 1px;
@@ -27,3 +29,10 @@
 		}
 	}
 }
+.count-top{
+	text-align: center;
+	line-height: 50px; 
+	font-size: 30px;
+    font-family: 'Rozha One', serif;  
+    font-weight: 900; 
+}	
