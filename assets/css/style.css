@@ -208,6 +208,11 @@ a, button, input {
   height: 1px;
   background-color: #000;
 }
+@media only screen and (max-width: 767.98px) {
+  .has-sep .sep-area {
+    width: 270px;
+  }
+}
 .has-sep .spe1, .has-sep .spe2 {
   position: absolute;
   bottom: 0;
@@ -634,11 +639,11 @@ a, button, input {
   overflow: hidden;
 }
 .hero-slideshow .swiper-slide .slide-inner {
-  height: 680px;
+  min-height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
-  padding: 20px 0;
+  padding: 75px 0;
   position: relative;
   z-index: 2;
 }
@@ -663,9 +668,21 @@ a, button, input {
   font-size: 36px;
   line-height: 51px;
 }
+@media only screen and (max-width: 767.98px) {
+  .hero-slideshow .slide-text-content .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
 .hero-slideshow .slide-text-content p {
   font-size: 20px;
   line-height: 30px;
+}
+@media only screen and (max-width: 767.98px) {
+  .hero-slideshow .slide-text-content p {
+    font-size: 17px;
+    line-height: 28px;
+  }
 }
 .hero-slideshow .slide-text-content .btn {
   margin-top: 22px;

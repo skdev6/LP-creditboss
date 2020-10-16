@@ -1,12 +1,12 @@
 .hero-slideshow{ 
 	.swiper-slide { 
 	  overflow: hidden;
-		.slide-inner{
-			height: 680px;     
+		.slide-inner{ 
+			min-height: 100vh;      
 			width: 100%;
 			background-size: cover;
 			background-position: center;
-			padding:20px 0;  
+			padding:75px 0;    
 			position: relative; 
 			z-index: 2;
 			&::before{
@@ -30,10 +30,18 @@
 		.title{
 			font-size: 36px;
 			line-height: 51px; 
+			@media #{$md_device}{
+				font-size: 32px; 
+				line-height: 40px; 
+			} 
 		}
 		p{
 			font-size: 20px;
 			line-height: 30px; 
+			@media #{$md_device}{
+				font-size: 17px; 
+				line-height: 28px;  
+			} 
 		}
 		.btn{
 			margin-top: 22px;  

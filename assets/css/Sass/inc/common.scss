@@ -162,6 +162,9 @@ a,button,input{
         width: 331px;
         height: 1px;
         background-color: #000; 
+        @media #{$md_device}{
+            width: 270px;  
+        } 
     }
     .spe1,.spe2{    
         position: absolute;
